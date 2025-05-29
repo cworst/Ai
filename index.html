@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Frog on the Lilypads</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="game-title">Frog on the Lilypads</div>
+  <div id="game-ui">
+    <span>Score: <span id="score">0</span></span>
+    <span>Level: <span id="level">1</span></span>
+  </div>
+  <div id="pond">
+    <div id="frog"></div>
+  </div>
+  <div id="death-screen">
+    <div class="death-message">
+      <h2>Game Over</h2>
+      <div id="final-score"></div>
+      <button id="restart-btn">Restart</button>
+    </div>
+  </div>
+  <div id="level-screen">
+    <div class="level-message">
+      <h2 id="level-title"></h2>
+      <button id="level-start-btn">Start</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
