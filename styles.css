@@ -1,0 +1,120 @@
+body {
+  background: #b3ecff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+#game-title {
+  font-family: 'Luckiest Guy', 'Comic Sans MS', cursive, sans-serif;
+  font-size: 2.5em;
+  color: #388e3c;
+  margin-top: 32px;
+  margin-bottom: 6px;
+  text-shadow: 1px 4px 12px #7ec85090, 1px 1px 0 #fff;
+  letter-spacing: 2px;
+}
+
+#game-ui {
+  width: 600px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  font-family: sans-serif;
+  font-size: 1.2em;
+  user-select: none;
+}
+
+#pond {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  background: #80d4ff;
+  border-radius: 40px;
+  box-shadow: 0 0 20px #54b3d6 inset;
+  overflow: hidden;
+}
+
+.lilypad {
+  position: absolute;
+  width: 80px;
+  height: 50px;
+  background: #7ec850;
+  border-radius: 50% 45% 55% 50%/55% 50% 60% 40%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: box-shadow 0.2s, opacity 0.7s, transform 0.7s;
+  opacity: 1;
+  z-index: 1;
+}
+
+.lilypad:hover {
+  box-shadow: 0 6px 16px rgba(0,0,0,0.33);
+}
+
+.flower {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 36px;
+  height: 36px;
+  pointer-events: none;
+  z-index: 3;
+}
+
+#frog {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: radial-gradient(circle at 25px 30px, #59be5b 60%, #377e3f 100%);
+  border-radius: 50%;
+  z-index: 10;
+  left: 60px;
+  top: 180px;
+  transition: left 0.5s cubic-bezier(.17,.67,.83,.67), top 0.5s cubic-bezier(.17,.67,.83,.67);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  border: 2px solid #377e3f;
+}
+
+#death-screen, #level-screen {
+  display: none;
+  position: fixed;
+  left: 0; top: 0; right: 0; bottom: 0;
+  background: rgba(30, 30, 30, 0.85);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+#death-screen.active,
+#level-screen.active {
+  display: flex;
+}
+
+.death-message, .level-message {
+  background: #fff;
+  color: #222;
+  padding: 2em 3em;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+}
+
+#restart-btn, #level-start-btn {
+  margin-top: 16px;
+  padding: 10px 25px;
+  border: none;
+  background: #59be5b;
+  color: #fff;
+  font-size: 1.2em;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+#restart-btn:hover, #level-start-btn:hover {
+  background: #377e3f;
+}
