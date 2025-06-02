@@ -18,6 +18,20 @@ body {
   letter-spacing: 2px;
 }
 
+#instructions {
+  width: 600px;
+  background: #e3fffa;
+  color: #1d4b2c;
+  font-family: sans-serif;
+  font-size: 1.08em;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  padding: 12px 22px;
+  box-shadow: 0 2px 8px #b2f1d6a8;
+  text-align: center;
+  line-height: 1.6;
+}
+
 #game-ui {
   width: 600px;
   margin-bottom: 10px;
